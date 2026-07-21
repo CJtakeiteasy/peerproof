@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "peerproof.evidence-package.v1",
+  "dataset": "analysis/data/study.csv",
+  "idColumn": "id",
+  "outcome": "y",
+  "predictors": ["x"],
+  "includeIntercept": true,
+  "missingData": "reject",
+  "artifact": "stdout-json",
+  "claimMapping": {
+    "predictor": { "paperTerm": "exposure", "column": "x" },
+    "outcome": { "paperTerm": "outcome", "column": "y" },
+    "coefficientTerm": "x"
+  }
+}

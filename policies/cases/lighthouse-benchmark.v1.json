@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "peerproof.reviewed-case-policy.v1",
+  "id": "peerproof.lighthouse-benchmark.v1",
+  "label": "Lighthouse reviewed benchmark policy v1",
+  "profileId": "peerproof.node-script.v1",
+  "scope": "Checked-in Lighthouse benchmark copied into a per-audit workspace",
+  "origin": {
+    "type": "project-authored-synthetic-fixture",
+    "repository": null,
+    "commit": null,
+    "doi": null,
+    "retrievedAt": null,
+    "archiveSha256": null,
+    "authorityStatus": "PeerProof-authored synthetic fixture; no upstream scientific authority is claimed."
+  },
+  "repository": {
+    "revisionType": "exact-content-manifest-sha256",
+    "contentHashMode": "utf8-lf-normalized-or-binary-raw-sha256",
+    "sourcePath": "samples/fragile-study/repo",
+    "files": {
+      "README.md": "6c02bcc0af289ac3a114c07905c8379f57a698bf7d7368b2fb03ce7a5c46262a",
+      "analysis.js": "fde908b3823307bfa0ee2b0fc84c9236a8e86d51d052e0d03f00dd2020c04fbd",
+      "data/study.csv": "c87c4d62b331084de26f8ffcc109239ce96995900ef4664fe270938151bce426",
+      "docs/example.js": "ca3fc7d83f36e376ac3af210d19d22a88bc02612a4d54a84988ec17c82b21dca",
+      "package.json": "fb7cf4a57363f9073a837ddaebac46267f6ca5ccc33d5a7d1a74cc997d1443cd",
+      "peerproof.evidence.json": "f1d268b83a8a22e129b1dfcb67cb24ac0fae17f9c839ae7d41b2f04e0c17a88b",
+      "scripts/preview.js": "da83b612dd3fb760876acec7ea7de872e2609335bfaa05f9ac4487ad603e9df8",
+      "src/load-study.js": "17f6937d9aa4b01b7a363b0aa43ad5e2f29fa012cc7492fb27fa1d3ffde3a989"
+    }
+  },
+  "allowedPlans": [
+    {
+      "executable": "node",
+      "args": ["analysis.js"],
+      "cwd": ".",
+      "expectedArtifact": "stdout-json",
+      "timeoutMs": 10000
+    }
+  ],
+  "repairRules": [
+    {
+      "id": "relative-data-url-v1",
+      "file": "src/load-study.js",
+      "oldText": "const DATA_PATH = \"/Users/original-author/Desktop/lighthouse/data/study.csv\";",
+      "newText": "const DATA_PATH = new URL(\"../data/study.csv\", import.meta.url);",
+      "policyClassification": "infrastructure"
+    }
+  ],
+  "review": {
+    "status": "reviewed-committed",
+    "approvedBy": "PeerProof maintainer review",
+    "approvedAt": "2026-07-19",
+    "approvalEvidence": "Version-controlled policy bundle and exact repository content manifest",
+    "signature": null
+  }
+}

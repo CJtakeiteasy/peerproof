@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "peerproof.recorded-investigation.v2",
+  "recordedAt": "2026-07-19",
+  "case": "The Datasaurus Dozen",
+  "mode": "recorded-public-case",
+  "currentRunModelCall": false,
+  "displayLabel": "Recorded public investigation",
+  "disclosure": "This canonical-content reviewed investigation is not proof of a browser-time Codex call.",
+  "summary": "The repository is an R data package, not a one-command paper pipeline. Its official example visualizes the data, while the package test establishes the 1,846-row, 13-dataset shape contract.",
+  "hypothesis": "The official example iterates over every named dataset and plots x against y. It does not compute the paper's five-number contract, so an admitted read-only independent verifier is the defensible execution path.",
+  "entryPoint": "source/inst/examples/datasaurus_dozen.R (package example; not standalone)",
+  "inspectedFiles": [
+    "source/DESCRIPTION",
+    "source/LICENSE.md",
+    "source/inst/examples/datasaurus_dozen.R",
+    "source/tests/testthat/test-datasets.R",
+    "data/datasaurus.csv",
+    "SOURCE.md",
+    "PAPER_SOURCE.json"
+  ],
+  "proposedStrategy": "Do not patch the public source. Admit the reviewed canonical-content evidence snapshot, then execute the registered read-only summary-matrix verifier without relaxing the reviewed claim.",
+  "limitations": [
+    "No browser-time Codex invocation is claimed.",
+    "The verifier is an independent numerical check, not a rerun of the original R package pipeline.",
+    "The admitted package/mirror CSV matches only 20 of 65 reviewed paper values; this does not establish that the paper is false."
+  ],
+  "review": {
+    "status": "reviewed-committed",
+    "reviewedBy": "PeerProof maintainer review",
+    "reviewedAt": "2026-07-19",
+    "signature": null
+  }
+}

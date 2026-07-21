@@ -1,0 +1,21 @@
+{
+  "reported": {
+    "slope": 1.276,
+    "slope_raw": "1.276",
+    "slope_decimals": 3,
+    "p_value_upper_bound": 0.001
+  },
+  "regenerated": {
+    "slope": 1.276190476190476,
+    "p_value": 0.0009428437608443163
+  },
+  "robustness": {
+    "computed_by": "PeerProof independent verifier",
+    "effect_stability_metric": "abs(delta coefficient) / max(abs(baseline coefficient), baseline standard error)",
+    "scaled_effect_change_threshold": 0.2,
+    "removed_observation": "P10",
+    "slope": 0.03333333333333333,
+    "p_value": 0.8488585431471012
+  },
+  "verdict": "Fragile"
+}

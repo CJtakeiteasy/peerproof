@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "peerproof.public-evidence-bundle.v2",
+  "id": "peerproof.datasaurus-dozen.v1",
+  "label": "Datasaurus Dozen reviewed public evidence bundle v1",
+  "scope": "Independent summary-matrix audit over a canonical-content admitted cross-source package/data snapshot",
+  "verifierContractId": "peerproof.summary-matrix.v3",
+  "contentHashMode": "canonical-content-v1:utf8-newlines-to-lf-or-binary-raw",
+  "sourcePath": "samples/datasaurus-dozen",
+  "policyFile": "policies/public-cases/datasaurus-dozen.v1.json",
+  "origin": {
+    "type": "cross-source-public-snapshot",
+    "repository": "https://github.com/jumpingrivers/datasauRus",
+    "repositoryCommit": "0496ac15208e9ee4a58ea81a5de46912f095aa15",
+    "dataMirror": "https://github.com/rfordatascience/tidytuesday",
+    "dataMirrorCommit": "7489888351e5cc61e04ae6ad300884a4c7f37166",
+    "doi": "10.1145/3025453.3025912",
+    "license": "MIT",
+    "paperLicensingStatus": "Paper artifact not redistributed; bibliographic metadata and a short reviewed source span only",
+    "authorityStatus": "Cross-source mirror: repository and data mirror revisions are maintainer-declared; the CSV is not claimed to be a same-commit export of the package data object.",
+    "originVerification": {
+      "status": "declared-not-cryptographically-verified",
+      "method": "version-controlled-maintainer-attestation",
+      "receipt": null
+    }
+  },
+  "files": {
+    "data/datasaurus.csv": {
+      "canonicalSha256": "febad7f618c51699815060a075ba80f13f6f1474e24e11d52ad5599ee269cc51",
+      "canonicalGitBlobSha1": "10ad97cd8ac1862e128448a2a4bf94f1bf5f3a2f"
+    },
+    "source/DESCRIPTION": {
+      "canonicalSha256": "d8a23ebefc5c6257d13a0142b7e5075777d988f6d2c23f8702b18a8c21777a51"
+    },
+    "source/LICENSE.md": {
+      "canonicalSha256": "291e8cf85c7e722dfe0807a94feeefcfa3219ba03d876cfdad0cf19436d95d19"
+    },
+    "source/inst/examples/datasaurus_dozen.R": {
+      "canonicalSha256": "57fa347d49aed4ca390d9b90d4696a463a26121a164a8d778fd63d7b01dc93ad"
+    },
+    "source/tests/testthat/test-datasets.R": {
+      "canonicalSha256": "1ac1614e5f40f2c98df15aded717221ddd50a6fc35c3e18308e0d56b42dd3261"
+    },
+    "SOURCE.md": {
+      "canonicalSha256": "639d9eb3be5c4a083aaafee83ebe3cee7fc66e795d6e61a68ded988713456bcd"
+    },
+    "PAPER_SOURCE.json": {
+      "canonicalSha256": "f956dd2b208009d0ff2651e60c44f141478a5623f9cefa4f39578fd5c35d516b"
+    },
+    "INVESTIGATION.json": {
+      "canonicalSha256": "2604b4c05a8eae13cfaed5fedb1fb69593873f6bbbfee0a84f08abc55630ca09"
+    }
+  },
+  "sourceRecord": "PAPER_SOURCE.json",
+  "investigationRecord": "INVESTIGATION.json",
+  "evidenceManifest": {
+    "schemaVersion": "peerproof.summary-matrix-evidence.v1",
+    "dataset": "data/datasaurus.csv",
+    "columns": ["dataset", "x", "y"],
+    "expectedDatasets": [
+      "away",
+      "bullseye",
+      "circle",
+      "dino",
+      "dots",
+      "h_lines",
+      "high_lines",
+      "slant_down",
+      "slant_up",
+      "star",
+      "v_lines",
+      "wide_lines",
+      "x_shape"
+    ],
+    "rowsPerDataset": 142,
+    "duplicateRows": "reject",
+    "numericValues": "finite-strict-decimal",
+    "reportedTargetsSource": "PAPER_SOURCE.json#/anchor/reportedTargets",
+    "artifact": "independent-read-only"
+  },
+  "case": {
+    "kind": "real-world",
+    "title": "The Datasaurus Dozen",
+    "subtitle": "Licensed public research case · CHI 2017",
+    "description": "The paper reports the same five two-decimal summary values across thirteen distributions; PeerProof checks that claim against an admitted package/data-mirror snapshot.",
+    "reportedFigure": "Figure 6",
+    "repositoryEntryPoint": "source/inst/examples/datasaurus_dozen.R (package example; not standalone)",
+    "paperUrl": "https://doi.org/10.1145/3025453.3025912",
+    "repositoryUrl": "https://github.com/jumpingrivers/datasauRus/tree/0496ac15208e9ee4a58ea81a5de46912f095aa15",
+    "package": {
+      "paper": "CHI 2017 · DOI-linked",
+      "repository": "R package · pinned commit",
+      "dataset": "datasaurus.csv · 1,846 rows",
+      "claim": "1 numerical claim"
+    }
+  },
+  "claim": {
+    "id": "datasaurus_summary_contract",
+    "text": "The paper reports identical two-decimal x/y means, x/y standard deviations, and Pearson correlation for all 13 Datasaurus datasets despite visibly different distributions.",
+    "evidence": {
+      "testFamily": "descriptive_summary_matrix",
+      "effectType": "summary_matrix",
+      "datasetLabel": "Datasaurus Dozen",
+      "precisionRule": "reported-print-precision",
+      "statisticalTest": "Mean, sample standard deviation, and Pearson correlation"
+    }
+  },
+  "upstreamExecution": {
+    "status": "not-available",
+    "command": "Not executed — packaged R example requires an installed datasauRus package runtime",
+    "stderr": "Original package runtime — Not available in this deployment. The pinned source snapshot is provenance evidence, not a standalone runnable package installation; the example assumes package data is already loaded.",
+    "blocker": {
+      "type": "infrastructure",
+      "file": "source/DESCRIPTION",
+      "line": 28,
+      "description": "The pinned source snapshot is not a standalone installed package runtime; its example assumes the datasauRus data object is already loaded."
+    }
+  },
+  "verdictScopeDisclosure": {
+    "dataChain": "The R package commit and TidyTuesday data-mirror commit are independently pinned sources; the CSV is not represented as a same-commit export of the package's .rda data object.",
+    "doesNotMean": "PeerProof did not run the paper's original data-generation pipeline. This result is not a finding that the paper is false or that the authors' publication dataset was incorrect."
+  },
+  "review": {
+    "status": "reviewed-committed",
+    "approvedBy": "PeerProof maintainer review",
+    "approvedAt": "2026-07-19",
+    "approvalEvidence": "Version-controlled public-case bundle with exact complete file inventory",
+    "signature": null
+  }
+}

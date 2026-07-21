@@ -1,0 +1,6 @@
+{
+  "name": "study-analysis",
+  "private": true,
+  "type": "module",
+  "scripts": { "reproduce": "node src/reproduce.mjs" }
+}

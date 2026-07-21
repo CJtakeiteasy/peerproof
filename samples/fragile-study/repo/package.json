@@ -1,0 +1,8 @@
+{
+  "name": "lighthouse-study-analysis",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "analyze": "node analysis.js"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+.env
+.peerproof/
+*.log
+.DS_Store
+coverage/

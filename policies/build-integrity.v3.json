@@ -1,0 +1,520 @@
+{
+  "schemaVersion": "peerproof.build-integrity-manifest.v3",
+  "application": {
+    "name": "peerproof",
+    "version": "0.17.0"
+  },
+  "contentHashMode": "canonical-content-v1:utf8-newlines-to-lf-or-binary-raw",
+  "runtimeClosure": {
+    "schemaVersion": "peerproof.runtime-closure.v1",
+    "productEntryPoints": [
+      "server.js",
+      "bin/peerproof.js",
+      "public/app.js"
+    ],
+    "evaluationEntryPoints": [
+      "scripts/agent-eval.js",
+      "scripts/docker-smoke.js",
+      "scripts/live-smoke.js",
+      "scripts/policy-bundle-check.js",
+      "scripts/policy-profile-eval.js"
+    ],
+    "modules": [
+      "bin/peerproof.js",
+      "public/app.js",
+      "public/file-utils.js",
+      "scripts/agent-eval.js",
+      "scripts/docker-smoke.js",
+      "scripts/live-smoke.js",
+      "scripts/policy-bundle-check.js",
+      "scripts/policy-profile-eval.js",
+      "server.js",
+      "src/audit-engine.js",
+      "src/build-info.js",
+      "src/build-integrity.js",
+      "src/case-policy-bundle.js",
+      "src/claim-extractor.js",
+      "src/codex-investigator.js",
+      "src/data-resolution-policy.js",
+      "src/execution-environment.js",
+      "src/independent-evidence-audit.js",
+      "src/independent-verifier.js",
+      "src/js-lineage.js",
+      "src/pdf-source.js",
+      "src/pdf-worker.js",
+      "src/policy-registry.js",
+      "src/public-evidence-bundle.js",
+      "src/real-world-case.js",
+      "src/repair-policy.js",
+      "src/run-policy.js",
+      "src/runtime-assets.js",
+      "src/runtime-closure.js",
+      "src/sample-case.js",
+      "src/statistics.js",
+      "src/utils.js",
+      "src/verification-policy.js",
+      "src/verifier-registry.js",
+      "src/verifier.js",
+      "src/verifiers/simple-ols.js",
+      "src/verifiers/summary-matrix.js",
+      "src/version.js",
+      "src/workspace-path.js"
+    ],
+    "productClosureSha256": "a622105f24721f614d5966c2d3f8913caf2a2f365b03517a789ee7e7f1734800",
+    "evaluationClosureSha256": "121e8db461fbf62c6b34032852b64840046c784b301d0abffa57d8556004c68a"
+  },
+  "assetClosure": {
+    "schemaVersion": "peerproof.runtime-asset-closure.v1",
+    "policyDirectories": [
+      "policies/cases",
+      "policies/public-cases"
+    ],
+    "assets": [
+      {
+        "path": "package.json",
+        "role": "application-metadata",
+        "kind": "application-metadata"
+      },
+      {
+        "path": "package-lock.json",
+        "role": "dependency-lock",
+        "kind": "dependency-lock"
+      },
+      {
+        "path": "public/index.html",
+        "role": "judge-interface",
+        "kind": "browser-entry-document"
+      },
+      {
+        "path": "public/styles.css",
+        "role": "judge-interface",
+        "kind": "browser-style"
+      },
+      {
+        "path": "Dockerfile",
+        "role": "deployment-entry",
+        "kind": "deployment-entry"
+      },
+      {
+        "path": ".dockerignore",
+        "role": "deployment-policy",
+        "kind": "deployment-policy"
+      },
+      {
+        "path": "start.cmd",
+        "role": "launcher",
+        "kind": "launcher"
+      },
+      {
+        "path": "start.sh",
+        "role": "launcher",
+        "kind": "launcher"
+      },
+      {
+        "path": "samples/fragile-study/paper.md",
+        "role": "reviewed-benchmark-evidence",
+        "kind": "reviewed-benchmark-evidence"
+      },
+      {
+        "path": "scripts/generate-build-manifest.js",
+        "role": "release-integrity-tool",
+        "kind": "release-integrity-tool"
+      },
+      {
+        "path": "scripts/build-integrity-check.js",
+        "role": "release-integrity-tool",
+        "kind": "release-integrity-tool"
+      },
+      {
+        "path": "policies/cases/lighthouse-benchmark.v1.json",
+        "role": "trusted-case-policy",
+        "kind": "case-policy"
+      },
+      {
+        "path": "policies/cases/nested-node-policy-eval.v1.json",
+        "role": "trusted-case-policy",
+        "kind": "case-policy",
+        "includeRepositoryFilesInBuild": true
+      },
+      {
+        "path": "policies/public-cases/datasaurus-dozen.v1.json",
+        "role": "public-evidence-policy",
+        "kind": "public-evidence-policy"
+      }
+    ],
+    "registrySha256": "7e35d9e57c38934e9c38630039a66632a0232fec2d75498471d2aa86f888d20f"
+  },
+  "files": {
+    ".dockerignore": {
+      "canonicalSha256": "d492228bc99f0f6a25e59d15f52cf6abb73871450c63942b6ca1c9e392c4752c",
+      "role": "deployment-policy"
+    },
+    "bin/peerproof.js": {
+      "canonicalSha256": "796741baf27e7a5019ddbe1f21b098981f149754c0e01159a03b0c647b047e04",
+      "role": "cli-entry"
+    },
+    "Dockerfile": {
+      "canonicalSha256": "1f10536cb9dcc5073c6369894ca135595458f7f427420a430371ce946cb3bdb6",
+      "role": "deployment-entry"
+    },
+    "evals/policy-profiles/nested-node-study/analysis/data/values.csv": {
+      "canonicalSha256": "dbd27704486c464be4e51f1dbb9f3ff62ac245c8347743ae6a355d8059e4f81a",
+      "role": "reviewed-policy-evaluation-fixture"
+    },
+    "evals/policy-profiles/nested-node-study/analysis/workflow/reproduce.mjs": {
+      "canonicalSha256": "e3040739da531e9f0c999ce7e22e1ac67ac76c94a31bfab15edc771b09732268",
+      "role": "reviewed-policy-evaluation-fixture"
+    },
+    "evals/policy-profiles/nested-node-study/package.json": {
+      "canonicalSha256": "8220973c6565ec369ec10ae545cde081a465eefa0b08575a86392bb0c68831a7",
+      "role": "reviewed-policy-evaluation-fixture"
+    },
+    "evals/policy-profiles/nested-node-study/README.md": {
+      "canonicalSha256": "1fc46cc850dda76924ac8658f69fa1810925437105fd71e871a0c934c7b74895",
+      "role": "reviewed-policy-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/analysis/data/study.csv": {
+      "canonicalSha256": "2b29ead3cacb38eee8465dc87b9566b00fe08a0ade39997cad187af030282931",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/analysis/package.json": {
+      "canonicalSha256": "155d00a32f2f513eb73469867e2e7baabf0739ec98fdd3c847916c73aaefac40",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/analysis/peerproof.evidence.json": {
+      "canonicalSha256": "117e0f7265eb08b04dc7ef43dcd747d2a8bbf3a631b560b8ee7bebcfa2582d67",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/analysis/run.js": {
+      "canonicalSha256": "f47c91dc57d9d42dd35173f865cac1e277a843f7d33abe702d5cebf91b5f565d",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/docs-example.js": {
+      "canonicalSha256": "8c293c26f960b79088a057f4e8a9772f19cab3dfd5bff71183acd6ac1b6fa42f",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/package.json": {
+      "canonicalSha256": "9a51b25d7193af591a0574d74a11422d89cefec92f69e3f02a77fa6f40ffb002",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-a-working-directory/README.md": {
+      "canonicalSha256": "1adc0fa69886bed694b2125f284d962fe35d4db91dd19de115ffe44e9c200cb0",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-b-package-entry/data/study.csv": {
+      "canonicalSha256": "2b29ead3cacb38eee8465dc87b9566b00fe08a0ade39997cad187af030282931",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-b-package-entry/package.json": {
+      "canonicalSha256": "e4ac49aaa1323d550e32d790b1dfb4f513cbbae31e3e8553351a4a45bb3a31e6",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-b-package-entry/peerproof.evidence.json": {
+      "canonicalSha256": "f1d268b83a8a22e129b1dfcb67cb24ac0fae17f9c839ae7d41b2f04e0c17a88b",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-b-package-entry/README.md": {
+      "canonicalSha256": "90dff15c614f8b418874cbebfe4083ea75f8c5c5de1768818ab581fab49a2bb7",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-b-package-entry/scripts/preview.mjs": {
+      "canonicalSha256": "160580b5f820fd041161f8a1334fa9db8e155c0118385173fd4e918064a622f8",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-b-package-entry/tools/analyze.mjs": {
+      "canonicalSha256": "ca3cf2adc6a5784f5887af66a3f99effbe237445bb0b3782ffbf1f9e2b6c6c21",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-c-analytical-change/analysis.js": {
+      "canonicalSha256": "f88a69cb9582a501adcf30b7faba3eed52642412e8a0b4a275bdcd85ebd133b7",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-c-analytical-change/data/study.csv": {
+      "canonicalSha256": "2b29ead3cacb38eee8465dc87b9566b00fe08a0ade39997cad187af030282931",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-c-analytical-change/package.json": {
+      "canonicalSha256": "d35def12ec6b9019667446d1c441edf44c5be15c7d806ce4b3807f61359a518f",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-c-analytical-change/peerproof.evidence.json": {
+      "canonicalSha256": "f1d268b83a8a22e129b1dfcb67cb24ac0fae17f9c839ae7d41b2f04e0c17a88b",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-c-analytical-change/README.md": {
+      "canonicalSha256": "4f5a11fb8040c1deba145397cb6774eebcd1644dc352b0e2efc67d39ee70ecab",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-d-prompt-injection/data/study.csv": {
+      "canonicalSha256": "06e2baa0ac82b12ba2d58e4b621647759679f0e6f99b8531fd9ab19b1f358a70",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-d-prompt-injection/package.json": {
+      "canonicalSha256": "8655f9ddce38af574f0b8d473e49dca057c31016934f5fa4008bb1924314d412",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-d-prompt-injection/peerproof.evidence.json": {
+      "canonicalSha256": "f1d268b83a8a22e129b1dfcb67cb24ac0fae17f9c839ae7d41b2f04e0c17a88b",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-d-prompt-injection/README.md": {
+      "canonicalSha256": "4194d6acf07bffe562fcd46cc84f0b1839ed7e68398d39bdceeccf5ce7210bfa",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-d-prompt-injection/src/reproduce.mjs": {
+      "canonicalSha256": "09ab0d9f61670394c427b98f1b2b60c6a81acc3c3d576cfa776dff53b6e4b30b",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-e-ambiguous-data/analysis.js": {
+      "canonicalSha256": "c655932a920542831523167156eca569618de688b2600b99539bf7880f5970a4",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-e-ambiguous-data/data/cohort-a.csv": {
+      "canonicalSha256": "06e2baa0ac82b12ba2d58e4b621647759679f0e6f99b8531fd9ab19b1f358a70",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-e-ambiguous-data/data/cohort-b.csv": {
+      "canonicalSha256": "fc5c3159d4c40c62631a7fcb83cbc0d3c7047c2812e7cc245f1704e209ac36c8",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-e-ambiguous-data/package.json": {
+      "canonicalSha256": "cc01176085548f07c82bc280125e054eb24f0738ee82380e37271d7cf7516d61",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-e-ambiguous-data/README.md": {
+      "canonicalSha256": "fb8b012a57ce9bdb400da8be0b25dd03496a49ef510b2e2272ef37a9621ad166",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-f-monorepo/package.json": {
+      "canonicalSha256": "7f81443014cee24a8a0bbfde279895689523caec891aa2cef738d424e7aea969",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-f-monorepo/packages/study/data/study.csv": {
+      "canonicalSha256": "1351fb209795dbb46bacb1199510377c2ad1c7ffcbf7cbdfb47a7adc9569468e",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-f-monorepo/packages/study/package.json": {
+      "canonicalSha256": "011ff9885ff9cda9638bbd8a023b3ea5b99e6f683dbde6b26feeaaccddc7f756",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-f-monorepo/packages/study/peerproof.evidence.json": {
+      "canonicalSha256": "c4e22f77f3f221c48dfac73b0af6ca3f745200fa5d9625041dee2f6841b118c5",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-f-monorepo/packages/study/src/reproduce.mjs": {
+      "canonicalSha256": "09ab0d9f61670394c427b98f1b2b60c6a81acc3c3d576cfa776dff53b6e4b30b",
+      "role": "agent-evaluation-fixture"
+    },
+    "evals/repositories/case-f-monorepo/README.md": {
+      "canonicalSha256": "b3b68e16f9aee5d42ba44e467ee14ace0135c90739a9e9bd9869b0174579936a",
+      "role": "agent-evaluation-fixture"
+    },
+    "package-lock.json": {
+      "canonicalSha256": "efde0db9aef24b028d91b2733529257db5f58089befbaca22bc428db8d1acc00",
+      "role": "dependency-lock"
+    },
+    "package.json": {
+      "canonicalSha256": "981050819c004417e25502162c79db92f4ffb2940bf7450b78292427a7ea13b8",
+      "role": "application-metadata"
+    },
+    "policies/cases/lighthouse-benchmark.v1.json": {
+      "canonicalSha256": "412fbed05d07aee75831a7c10e534e64d1b7b8cbe2339cd1527ecaf5e242f351",
+      "role": "trusted-case-policy"
+    },
+    "policies/cases/nested-node-policy-eval.v1.json": {
+      "canonicalSha256": "95e0b465329657057e28451c99384be9844f078c846ec7d9ff4bd60525683b99",
+      "role": "trusted-case-policy"
+    },
+    "policies/public-cases/datasaurus-dozen.v1.json": {
+      "canonicalSha256": "2fc5e8541fc60858184c6bf6a9f037eb3bfc13b42df784003f10a93401ce32ff",
+      "role": "public-evidence-policy"
+    },
+    "public/app.js": {
+      "canonicalSha256": "9b8820a7aa7bb3bb71ab6e16823dc09669d756254a3defa81b69955e8a0b6143",
+      "role": "judge-interface"
+    },
+    "public/file-utils.js": {
+      "canonicalSha256": "cd4458db1c5265731aff9cd853072945bb86a906ac5d02bf19229c0c4cc701f9",
+      "role": "judge-interface"
+    },
+    "public/index.html": {
+      "canonicalSha256": "6f64bcff13bcf6bd9c7b2d2f1f1c24fb2f32023ea00f797b3c971f0a28704dbb",
+      "role": "judge-interface"
+    },
+    "public/styles.css": {
+      "canonicalSha256": "bb8fe3c039180b38d7d9406a02cce74f442595b7833cccce1432b19781a58ad2",
+      "role": "judge-interface"
+    },
+    "samples/fragile-study/paper.md": {
+      "canonicalSha256": "5079fc5868ac12c53cd3e2f88e6086e6eb25a0b6b8e9c96a2d8deb5f83d36ac3",
+      "role": "reviewed-benchmark-evidence"
+    },
+    "scripts/agent-eval.js": {
+      "canonicalSha256": "0756e822be76eb6f4455833e9df4cf57d7f07ec23d317da46d5c769d4228122e",
+      "role": "policy-evaluation-entry"
+    },
+    "scripts/build-integrity-check.js": {
+      "canonicalSha256": "b4411a0958e637a8edb85ad8e1259d035a8256c3e092b96455f74d812a8ddbeb",
+      "role": "release-integrity-tool"
+    },
+    "scripts/docker-smoke.js": {
+      "canonicalSha256": "535bccb60bfd1b0a39daa19d7bbec41f9e3a99f401df38b06122473e72fab006",
+      "role": "policy-evaluation-entry"
+    },
+    "scripts/generate-build-manifest.js": {
+      "canonicalSha256": "48203176665cd88bebf583665a8f7e4547b8ee54ea3cf6f7b3e70a64287d6beb",
+      "role": "release-integrity-tool"
+    },
+    "scripts/live-smoke.js": {
+      "canonicalSha256": "141acee6a43fa0c11516a0e817fae6b242a53315dc3b6d2f24fb1b591f815a23",
+      "role": "policy-evaluation-entry"
+    },
+    "scripts/policy-bundle-check.js": {
+      "canonicalSha256": "fa58e7798f37bc197625b35fa5139d72c0536cf674ed41e37e2310b247911973",
+      "role": "policy-evaluation-entry"
+    },
+    "scripts/policy-profile-eval.js": {
+      "canonicalSha256": "bdc7b5f75a85c3118f7d0e78fa454eef3e44be50efdd1874bfe0889b5cfccef3",
+      "role": "policy-evaluation-entry"
+    },
+    "server.js": {
+      "canonicalSha256": "7b240d077fa89a4ed8859b747d42f489e83a4d9d60868f469ee1eb5925f6de11",
+      "role": "application-entry"
+    },
+    "src/audit-engine.js": {
+      "canonicalSha256": "4665fe9e16e9bfbd0b347a36b26b6c87ad9244ff4639771a249f2dece73ca1d8",
+      "role": "audit-orchestrator"
+    },
+    "src/build-info.js": {
+      "canonicalSha256": "1919171f112bbb1e6473f894fb4e81b0e89aa2a022b6f5a759319f2076738317",
+      "role": "first-party-runtime",
+      "archiveSubstitution": "git-format-commit"
+    },
+    "src/build-integrity.js": {
+      "canonicalSha256": "ee153c3d6101cbd07c72174d9e6e289b78cf583d70ad37c9527a802a102336b0",
+      "role": "admission-policy"
+    },
+    "src/case-policy-bundle.js": {
+      "canonicalSha256": "22a50192de7220e79121d453062cde7f341e711c8dcc90f35f96099f230a85fd",
+      "role": "first-party-runtime"
+    },
+    "src/claim-extractor.js": {
+      "canonicalSha256": "1b411873ade71d8531a649058d86dc6b500949909f5c8a7f5598fb52146d040a",
+      "role": "first-party-runtime"
+    },
+    "src/codex-investigator.js": {
+      "canonicalSha256": "ab3421763b007764cb47a155d87df20b5713195c48b6a4ad8f6d7dd28ffac617",
+      "role": "first-party-runtime"
+    },
+    "src/data-resolution-policy.js": {
+      "canonicalSha256": "6205caa3856b8c352b37f1ea78cc307e2e4955ebe83fb6fa0800fec66cf20792",
+      "role": "first-party-runtime"
+    },
+    "src/execution-environment.js": {
+      "canonicalSha256": "134fbf82886b60d83f69289367180e1014c068b671549b7f4796a08694637d92",
+      "role": "first-party-runtime"
+    },
+    "src/independent-evidence-audit.js": {
+      "canonicalSha256": "6a855d174d9ac490cf750fe6cd3bbbc69557a48822d80751e5951ecd9abccc3b",
+      "role": "audit-orchestrator"
+    },
+    "src/independent-verifier.js": {
+      "canonicalSha256": "4b65c1fd0699559bfa35a7fb7ec48fbe4002ad7de7aa00984d34e774f0728ab8",
+      "role": "verifier-runtime"
+    },
+    "src/js-lineage.js": {
+      "canonicalSha256": "4c0dfa72d0dfc64867220275ef28b84163f11d45f597b16caf8a3e132a1390cf",
+      "role": "first-party-runtime"
+    },
+    "src/pdf-source.js": {
+      "canonicalSha256": "8a99b855f87a5b81a31e70da2aa69656ea7bf3ec3d5149d8822351ae9b0bd0a9",
+      "role": "first-party-runtime"
+    },
+    "src/pdf-worker.js": {
+      "canonicalSha256": "5f6e42adac9bfccdbbd898d06e26cc1b032c3a725aefac0da81c6de5fc7f89e6",
+      "role": "worker-runtime"
+    },
+    "src/policy-registry.js": {
+      "canonicalSha256": "da6fac1345fb89decfc85053aabb88d9cf9835fd817aead65b48406c5008d64a",
+      "role": "first-party-runtime"
+    },
+    "src/public-evidence-bundle.js": {
+      "canonicalSha256": "13c61a8c739659067e7318cd9e19a8e42676b23e61bf0b9e136ad3b36e6540b3",
+      "role": "first-party-runtime"
+    },
+    "src/real-world-case.js": {
+      "canonicalSha256": "4ee8b87539b487141d5f1c9f72445f1cbef36625c7376685d37427b4fe189982",
+      "role": "first-party-runtime"
+    },
+    "src/repair-policy.js": {
+      "canonicalSha256": "3e01f6d0e581d76139a90dffe3e60ef1e1473d44436c81d868a9a95b4016f62b",
+      "role": "first-party-runtime"
+    },
+    "src/run-policy.js": {
+      "canonicalSha256": "c9da3c14668ea9254811ffee88fce7a842c6cdb99cef147ca5c09c5adb9104a1",
+      "role": "first-party-runtime"
+    },
+    "src/runtime-assets.js": {
+      "canonicalSha256": "0b152df4f34c7b82b7f82b7f043a2a3b21050872291f5e1e611a4c1de2400329",
+      "role": "first-party-runtime"
+    },
+    "src/runtime-closure.js": {
+      "canonicalSha256": "d31f6554c50f067cebb93e6aedd217750041cd89ceea9bb41e644e3797228283",
+      "role": "admission-policy"
+    },
+    "src/sample-case.js": {
+      "canonicalSha256": "cdde0cb69a98bdf2404c0ed9f0ab3bb3e9916b92486dee4582792c572b359325",
+      "role": "first-party-runtime"
+    },
+    "src/statistics.js": {
+      "canonicalSha256": "4757684427ffa02a86bb898d862e12da5eb906e87d09deca49938d99239af3e6",
+      "role": "statistical-helper"
+    },
+    "src/utils.js": {
+      "canonicalSha256": "7848a3f79659cc44c2e265922d1c77584164369fdc4a7caf110d1a4eb3b56019",
+      "role": "first-party-runtime"
+    },
+    "src/verification-policy.js": {
+      "canonicalSha256": "82b19595f81c1c3ab834050507811bebdbe98c39b5ab6093b3dfab9ac1e1e563",
+      "role": "verdict-policy"
+    },
+    "src/verifier-registry.js": {
+      "canonicalSha256": "5e4bb26721d06da2056f89ab49d957e37ffa6bf6bb057cbc4d283fbeb79da37b",
+      "role": "verifier-registry"
+    },
+    "src/verifier.js": {
+      "canonicalSha256": "b7c3b1129b2bfacc5b82762a7486f966fd234e552083206006d772bfc8b86419",
+      "role": "verdict-policy"
+    },
+    "src/verifiers/simple-ols.js": {
+      "canonicalSha256": "5d629c381b9242038c4dcb96313579597a14a10baf32cf3bdec6811511477ae3",
+      "role": "verifier-runtime"
+    },
+    "src/verifiers/summary-matrix.js": {
+      "canonicalSha256": "bc51ce13e7cabddd098fae68a851252bf2f6e8b3d0475215b6d97857071ceb0f",
+      "role": "verifier-runtime"
+    },
+    "src/version.js": {
+      "canonicalSha256": "228065d2820a678eb559a4a2d2dede0794d38cd2b0cfa593ddf71bcb9c660498",
+      "role": "first-party-runtime"
+    },
+    "src/workspace-path.js": {
+      "canonicalSha256": "552655152997618e2d342848d02d669176d2d6dae7e393e47a3f7e845c753ada",
+      "role": "first-party-runtime"
+    },
+    "start.cmd": {
+      "canonicalSha256": "2208177a55e4ce936d828c6279b4fa70b1540e3097411ec0f1df735b4c9aa9e4",
+      "role": "launcher"
+    },
+    "start.sh": {
+      "canonicalSha256": "83d9da24c846424569666076b5db47340b1169aa6899f31739f1edf544e340b0",
+      "role": "launcher"
+    }
+  },
+  "review": {
+    "status": "reviewed-committed",
+    "approvedBy": "PeerProof maintainer review",
+    "approvedAt": "2026-07-20",
+    "signature": null
+  }
+}

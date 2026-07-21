@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PeerProof turns a scientific claim into an executable, auditable test." />
+    <title>PeerProof — Execute the evidence</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="PeerProof home">
+        <span class="brand-mark" aria-hidden="true">P</span><span>PeerProof</span>
+      </a>
+      <div class="header-meta">
+        <span class="mode-pill" id="mode-pill"><i></i> Checking runtime</span>
+        <a href="#method">Method</a><a href="#ledger">Evidence ledger</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Computational peer review</p>
+          <h1>The peer reviewer that <em>runs</em> the paper.</h1>
+          <p class="hero-lede">
+            PeerProof turns computational claims into executable, auditable tests. This judge build
+            demonstrates two checked-in evidence packages; uploaded papers can be compiled into structured ClaimSpecs.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" id="run-demo">
+              <span>Run benchmark audit</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </button>
+            <button class="case-button" id="run-real-world">Explore a public evidence audit</button>
+            <button class="text-button" id="open-upload">Extract claims from your paper</button>
+          </div>
+          <p class="microcopy">Current verifier: simple univariate OLS · canonical id,predictor,outcome manifest · Explicit AI provenance</p>
+        </div>
+
+        <article class="claim-preview" aria-label="Selected scientific claim">
+          <div class="preview-topline">
+            <span>Deterministic smoke-test benchmark</span><span class="paper-page">RESULTS · P. 2</span>
+          </div>
+          <blockquote>
+            “Higher exposure is associated with a positive outcome
+            <strong>(β = 1.276, p &lt; 0.001)</strong>.”
+          </blockquote>
+          <div class="claim-contract">
+            <div><span>Reported evidence · source</span><strong>Simple univariate OLS</strong></div>
+            <div><span>Verification policy · PeerProof</span><strong>Printed precision</strong></div>
+            <div><span>Verification policy · PeerProof</span><strong>Independent LOO · 20%</strong></div>
+          </div>
+          <div class="scan-line" aria-hidden="true"></div>
+        </article>
+      </section>
+
+      <section class="method-strip" id="method" aria-label="PeerProof method">
+        <div><span>01</span><strong>Extract reported evidence</strong><small>GPT-5.6 · typed schema</small></div>
+        <div><span>02</span><strong>Identify &amp; diagnose</strong><small>Codex · claim-producing path, read-only</small></div>
+        <div><span>03</span><strong>Approve the repair</strong><small>Policy-gated trusted fixture</small></div>
+        <div><span>04</span><strong>Execute the evidence</strong><small>Captured artifacts</small></div>
+        <div><span>05</span><strong>Recompute &amp; stress-test</strong><small>Independent statistics · deterministic rules</small></div>
+      </section>
+
+      <section class="workspace" id="ledger">
+        <aside class="audit-sidebar">
+          <p class="eyebrow" id="case-label">Audit package</p>
+          <div class="case-name">
+            <span class="file-icon">P</span>
+            <div><strong id="case-title">The Lighthouse Study</strong><small id="case-subtitle">Deterministic smoke-test benchmark</small></div>
+          </div>
+          <dl class="package-list">
+            <div><dt>Paper</dt><dd id="package-paper">paper.md</dd></div>
+            <div><dt>Repository</dt><dd id="package-repository">Node.js · reviewed repository</dd></div>
+            <div><dt>Dataset</dt><dd id="package-dataset">study.csv · 10 rows</dd></div>
+            <div><dt>Primary claim</dt><dd id="package-claim">1 selected claim</dd></div>
+          </dl>
+          <div class="security-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.8 2.9 8.3 7 10 4.1-1.7 7-5.2 7-10V6l-7-3Z" /></svg>
+            <div><strong>Proposal ≠ permission</strong><span>Codex cannot cross the patch boundary; policy approval is recorded separately.</span></div>
+          </div>
+          <button class="secondary-button" id="rerun-sidebar">Run benchmark audit</button>
+          <button class="sidebar-link" id="switch-case">Explore a public evidence audit</button>
+        </aside>
+
+        <div class="ledger-panel" aria-live="polite">
+          <div class="empty-ledger" id="empty-ledger">
+            <div class="empty-orbit"><span></span></div>
+            <p class="eyebrow">Ready to investigate</p>
+            <h2>One claim. Every piece of evidence.</h2>
+            <p>Start with the deterministic smoke test, or inspect a source-referenced public research audit.</p>
+            <div class="empty-actions">
+              <button class="primary-button compact" id="run-empty">Run benchmark audit</button>
+              <button class="case-button compact" id="run-real-empty">Explore public evidence audit</button>
+            </div>
+          </div>
+
+          <div class="running-ledger is-hidden" id="running-ledger">
+            <div class="running-heading">
+              <div><p class="eyebrow" id="running-eyebrow">Audit in progress</p><h2 id="running-title">Waiting for the first server event</h2></div>
+              <span class="elapsed" id="elapsed">00:00</span>
+            </div>
+            <div class="progress-track"><i id="progress-bar"></i></div>
+            <div class="terminal-card">
+              <div class="terminal-top"><i></i><i></i><i></i><span>peerproof / audit</span></div>
+              <pre id="terminal-output"></pre>
+            </div>
+          </div>
+
+          <div class="audit-result is-hidden" id="audit-result">
+            <div class="result-header">
+              <div>
+                <p class="eyebrow">Claim-level verdict</p><h2>Evidence ledger</h2><p class="audit-id" id="audit-id"></p>
+                <div class="source-links is-hidden" id="source-links"></div>
+              </div>
+              <div class="verdict-badge" id="verdict-badge"><span>Verdict</span><strong id="verdict-label">—</strong><small id="verdict-scope">Claim-level deterministic verdict</small></div>
+            </div>
+
+            <section class="mode-disclosure" id="mode-disclosure">
+              <div class="mode-icon" aria-hidden="true">i</div>
+              <div><strong id="mode-title"></strong><p id="mode-message"></p><small id="mode-detail"></small></div>
+            </section>
+            <section class="scope-disclosure is-hidden" id="verdict-scope-disclosure">
+              <div><small>What this means</small><p id="verdict-scope-means"></p></div>
+              <div><small>What this does not mean</small><p id="verdict-scope-does-not-mean"></p></div>
+              <div><small>Data-chain boundary</small><p id="verdict-scope-data-chain"></p></div>
+            </section>
+            <div class="stage-provenance" id="stage-provenance"></div>
+            <div class="evidence-chain" id="evidence-chain"></div>
+
+            <div class="result-grid">
+              <section class="panel-card claim-card">
+                <div class="card-kicker"><span>01</span> Reported claim</div>
+                <blockquote id="result-claim"></blockquote><p class="source-quote" id="source-quote"></p>
+                <dl class="claim-boundary">
+                  <div><dt>Reported evidence</dt><dd id="reported-evidence-label"></dd></div>
+                  <div><dt>Source anchor</dt><dd id="source-anchor-status"></dd></div>
+                  <div><dt>Verification policy</dt><dd id="verification-policy-label"></dd></div>
+                  <div><dt>Paper dataset label</dt><dd id="paper-dataset-label"></dd></div>
+                  <div><dt>Resolved repository file</dt><dd id="resolved-data-file"></dd></div>
+                  <div><dt>Resolution actor</dt><dd id="data-resolution-actor"></dd></div>
+                  <div><dt>Data-path policy</dt><dd id="data-resolution-status"></dd></div>
+                  <div><dt>Paper predictor → repo column</dt><dd id="predictor-column-mapping"></dd></div>
+                  <div><dt>Paper outcome → repo column</dt><dd id="outcome-column-mapping"></dd></div>
+                  <div><dt>Mapping authority</dt><dd id="claim-mapping-authority"></dd></div>
+                </dl>
+              </section>
+              <section class="panel-card comparison-card">
+                <div class="card-kicker"><span>02</span> <span id="comparison-kicker">Numerical comparison</span></div>
+                <div class="metric-pair">
+                  <div><small id="reported-label">Reported β</small><strong id="reported-effect">—</strong></div>
+                  <div class="match-glyph">≈</div>
+                  <div><small id="regenerated-label">Regenerated β</small><strong id="regenerated-effect">—</strong></div>
+                </div>
+                <div class="match-line"><i></i><span id="match-copy">Awaiting execution</span></div>
+                <div class="dependency-check" id="dependency-check">
+                  <small>Data-dependency canary</small>
+                  <strong id="dependency-check-status">Not run</strong>
+                  <p id="dependency-check-copy">The author pipeline has not yet been challenged with a controlled dataset perturbation.</p>
+                </div>
+              </section>
+              <section class="panel-card robustness-card">
+                <div class="card-kicker"><span>03</span> Robustness</div>
+                <h3 id="robustness-title">Stress-test the conclusion.</h3>
+                <div id="robustness-visual"></div>
+                <p class="robustness-copy" id="robustness-copy"></p>
+              </section>
+              <section class="panel-card verdict-card">
+                <div class="card-kicker"><span>04</span> Deterministic verdict</div>
+                <p id="verdict-reason"></p>
+                <div class="rule-box"><small>Applied rule</small><strong id="verdict-rule"></strong></div>
+              </section>
+            </div>
+
+            <section class="public-results-section is-hidden" id="public-results-section">
+              <div class="section-heading">
+                <div><p class="eyebrow">Executed public data</p><h3 id="visual-evidence-title">Same summaries. Different shapes.</h3></div>
+                <span class="safe-badge">1,846 plotted observations</span>
+              </div>
+              <p class="visual-caption" id="visual-evidence-caption"></p>
+              <canvas id="visual-evidence-canvas" width="1200" height="830" aria-label="Thirteen scatterplots from the Datasaurus Dozen"></canvas>
+              <details class="summary-table-section" id="summary-table-section">
+                <summary>View accessible numerical summaries</summary>
+                <div class="table-scroll">
+                  <table>
+                    <caption>Statistics recomputed from the pinned Datasaurus CSV</caption>
+                    <thead><tr><th>Dataset</th><th>n</th><th>Mean x</th><th>Mean y</th><th>SD x</th><th>SD y</th><th>Correlation</th></tr></thead>
+                    <tbody id="summary-table-body"></tbody>
+                  </table>
+                </div>
+              </details>
+            </section>
+
+            <section class="investigation-section">
+              <details class="investigation-panel" open>
+                <summary>
+                  <div><p class="eyebrow">Repository investigation</p><h3>Show the intellectual labor</h3></div>
+                  <span class="investigation-mode" id="investigation-mode"></span>
+                </summary>
+                <div class="investigation-grid">
+                  <div class="investigation-block">
+                    <small>Inspected files</small><ul id="inspected-files"></ul>
+                  </div>
+                  <div class="investigation-block wide">
+                    <small>Entry-point hypothesis</small><p id="investigation-hypothesis"></p>
+                  </div>
+                  <div class="investigation-block">
+                    <small>Investigator-suggested RunPlan</small><code id="investigation-suggested-command"></code>
+                  </div>
+                  <div class="investigation-block">
+                    <small id="investigation-command-label">Policy-approved command actually executed</small><code id="investigation-command"></code>
+                  </div>
+                  <div class="investigation-block wide">
+                    <small>Observed result</small><pre id="investigation-result"></pre>
+                  </div>
+                  <div class="investigation-block full">
+                    <small>Proposed next action</small><p id="investigation-repair"></p>
+                  </div>
+                </div>
+              </details>
+            </section>
+
+            <section class="trace-section">
+              <div class="section-heading">
+                <div><p class="eyebrow">Audit trail</p><h3>What happened, in order</h3></div>
+                <button class="text-button" id="download-audit">Download JSON</button>
+              </div>
+              <ol class="timeline" id="timeline"></ol>
+            </section>
+            <section class="runplan-section" id="runplan-section">
+              <div class="section-heading">
+                <div><p class="eyebrow">Execution governance</p><h3>Run proposal, policy, approval, execution</h3></div>
+                <span class="safe-badge">Exact RunPlan only</span>
+              </div>
+              <div class="approval-flow" id="run-approval-flow"></div>
+              <pre class="diff-view" id="runplan-view"></pre>
+            </section>
+            <section class="patch-section">
+              <div class="section-heading">
+                <div><p class="eyebrow">Repair governance</p><h3 id="repair-heading">Proposal, policy, approval, execution</h3></div>
+                <span class="safe-badge" id="repair-badge">Analytical logic unchanged</span>
+              </div>
+              <div class="approval-flow" id="approval-flow"></div>
+              <pre class="diff-view" id="diff-view"></pre>
+            </section>
+            <section class="provenance-section">
+              <div class="section-heading"><div><p class="eyebrow">Provenance</p><h3>Evidence that survives the model</h3></div></div>
+              <div class="hash-grid" id="hash-grid"></div>
+              <details class="ai-receipt" id="ai-receipt">
+                <summary>AI execution receipt</summary>
+                <p>Declared and observed model/runtime identifiers. Missing live receipts are shown explicitly.</p>
+                <div class="hash-grid" id="ai-receipt-grid"></div>
+              </details>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="upload-dialog">
+      <form method="dialog" class="dialog-shell">
+        <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+        <p class="eyebrow">Live evidence extractor</p><h2>Compile claims from your paper</h2>
+        <p>Send a paper to GPT-5.6 to extract reported quantitative evidence into structured ClaimSpecs. This upload flow does not run the paper's code or data; unsupported claims are labeled extracted-only.</p>
+        <label class="drop-zone" for="paper-input">
+          <input id="paper-input" type="file" accept="application/pdf,.pdf,.md,.markdown,.txt" />
+          <span class="drop-icon">↥</span><strong id="paper-label">Choose a PDF, Markdown, or text file</strong>
+          <small>Maximum 15 MB · requires OPENAI_API_KEY</small>
+        </label>
+        <label class="privacy-consent"><input id="privacy-consent" type="checkbox" />
+          <span>I understand that the selected file is sent to the configured OpenAI API for claim extraction. PeerProof requests non-persistent response handling with <code>store: false</code>; deployment logging, account configuration, and service policies may still affect retention. Do not upload sensitive or regulated data.</span>
+        </label>
+        <label class="token-field">Judge demo token (only if required by deployment)<input id="judge-token" type="password" autocomplete="off" /></label>
+        <button type="button" class="primary-button compact" id="extract-paper">Extract ClaimSpecs</button>
+        <div class="extract-result is-hidden" id="extract-result"></div>
+      </form>
+    </dialog>
+
+    <footer>
+      <div class="brand"><span class="brand-mark">P</span><span>PeerProof</span></div>
+      <p>A peer reviewer that runs the paper, not just reads it.</p><span>Open source · auditable by design</span>
+    </footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

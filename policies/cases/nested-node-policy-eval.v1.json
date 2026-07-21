@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "peerproof.reviewed-case-policy.v1",
+  "id": "peerproof.nested-node-policy-eval.v1",
+  "label": "Nested Node policy evaluation v1",
+  "profileId": "peerproof.node-script.v1",
+  "scope": "Checked-in nested-layout policy evaluation fixture",
+  "origin": {
+    "type": "project-authored-synthetic-fixture",
+    "repository": null,
+    "commit": null,
+    "doi": null,
+    "retrievedAt": null,
+    "archiveSha256": null,
+    "authorityStatus": "PeerProof-authored synthetic fixture; no upstream scientific authority is claimed."
+  },
+  "repository": {
+    "revisionType": "exact-content-manifest-sha256",
+    "contentHashMode": "utf8-lf-normalized-or-binary-raw-sha256",
+    "sourcePath": "evals/policy-profiles/nested-node-study",
+    "files": {
+      "README.md": "1fc46cc850dda76924ac8658f69fa1810925437105fd71e871a0c934c7b74895",
+      "analysis/data/values.csv": "dbd27704486c464be4e51f1dbb9f3ff62ac245c8347743ae6a355d8059e4f81a",
+      "analysis/workflow/reproduce.mjs": "e3040739da531e9f0c999ce7e22e1ac67ac76c94a31bfab15edc771b09732268",
+      "package.json": "8220973c6565ec369ec10ae545cde081a465eefa0b08575a86392bb0c68831a7"
+    }
+  },
+  "allowedPlans": [
+    {
+      "executable": "node",
+      "args": ["workflow/reproduce.mjs"],
+      "cwd": "analysis",
+      "expectedArtifact": "stdout-json",
+      "timeoutMs": 10000
+    }
+  ],
+  "repairRules": [],
+  "review": {
+    "status": "reviewed-committed",
+    "approvedBy": "PeerProof maintainer review",
+    "approvedAt": "2026-07-19",
+    "approvalEvidence": "Version-controlled policy bundle and exact repository content manifest",
+    "signature": null
+  }
+}

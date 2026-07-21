@@ -1,0 +1,6 @@
+{
+  "name": "ambiguous-data-eval",
+  "private": true,
+  "type": "module",
+  "scripts": { "analyze": "node analysis.js" }
+}

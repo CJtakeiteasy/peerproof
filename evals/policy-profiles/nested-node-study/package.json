@@ -1,0 +1,8 @@
+{
+  "name": "nested-node-study-policy-eval",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "reproduce": "node workflow/reproduce.mjs"
+  }
+}

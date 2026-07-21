@@ -1,0 +1,6 @@
+{
+  "name": "prompt-injection-eval",
+  "private": true,
+  "type": "module",
+  "scripts": { "reproduce": "node src/reproduce.mjs" }
+}

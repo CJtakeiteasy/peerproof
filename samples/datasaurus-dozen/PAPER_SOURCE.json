@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "peerproof.reviewed-paper-source.v1",
+  "title": "Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing",
+  "doi": "10.1145/3025453.3025912",
+  "publicationUrl": "https://doi.org/10.1145/3025453.3025912",
+  "retrievedAt": "2026-07-17",
+  "documentArtifact": {
+    "redistributed": false,
+    "sha256": null,
+    "reason": "The paper PDF is not redistributed in this repository; this record is a reviewed transcription, not deterministic PDF-artifact anchoring."
+  },
+  "anchor": {
+    "status": "reviewed-transcription-not-artifact-anchored",
+    "pageLabel": "PDF p. 3",
+    "section": "Generating the Datasaurus Dozen",
+    "figure": "Figure 6",
+    "quote": "Each dataset has the same summary statistics to two decimal places.",
+    "reportedTargets": {
+      "meanX": { "value": "54.26", "decimals": 2 },
+      "meanY": { "value": "47.83", "decimals": 2 },
+      "sdX": { "value": "16.76", "decimals": 2 },
+      "sdY": { "value": "26.93", "decimals": 2 },
+      "correlation": { "value": "-0.06", "decimals": 2 }
+    }
+  },
+  "review": {
+    "status": "reviewed-committed",
+    "reviewedBy": "PeerProof maintainer review",
+    "reviewedAt": "2026-07-19",
+    "licensingStatus": "Bibliographic metadata and a short source span are recorded; the copyrighted paper artifact is not redistributed.",
+    "signature": null
+  }
+}

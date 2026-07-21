@@ -1,0 +1,32 @@
+{
+  "name": "peerproof",
+  "version": "0.17.0",
+  "private": true,
+  "type": "module",
+  "description": "An executable peer reviewer that turns scientific claims into auditable tests.",
+  "bin": {
+    "peerproof": "./bin/peerproof.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "coverage": "node scripts/check-coverage.js",
+    "live-smoke": "node scripts/live-smoke.js",
+    "agent-eval": "node scripts/agent-eval.js",
+    "policy-eval": "node scripts/policy-profile-eval.js",
+    "policy-bundle-check": "node scripts/policy-bundle-check.js",
+    "build-manifest": "node scripts/generate-build-manifest.js",
+    "build-integrity-check": "node scripts/build-integrity-check.js",
+    "docker-smoke": "node scripts/docker-smoke.js",
+    "check": "node --check server.js && node --check bin/peerproof.js && node --check public/app.js && node --check src/build-integrity.js && node --check src/runtime-closure.js && node --check src/runtime-assets.js && node --check src/public-evidence-bundle.js && node --check src/independent-evidence-audit.js && node --check src/verifiers/summary-matrix.js && node --check scripts/generate-build-manifest.js && node --check scripts/build-integrity-check.js && node --check scripts/live-smoke.js && node --check scripts/agent-eval.js && node --check scripts/policy-profile-eval.js && node --check scripts/policy-bundle-check.js && node --check scripts/docker-smoke.js && node --test && node scripts/build-integrity-check.js && node scripts/policy-bundle-check.js && node scripts/policy-profile-eval.js"
+  },
+  "dependencies": {
+    "@openai/codex-sdk": "0.144.4",
+    "acorn": "8.17.0",
+    "pdfjs-dist": "5.4.624"
+  },
+  "engines": {
+    "node": ">=20.16"
+  }
+}
