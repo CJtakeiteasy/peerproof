@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 
-const ARCHIVE_COMMIT = "98e85df800ba00e82eec5bf1d320fce4b9ac36a4";
+const ARCHIVE_COMMIT = "$Format:%H$";
 const COMMIT_PATTERN = /^[a-f0-9]{40}$/i;
 
 export class ApplicationCommitConfigurationError extends Error {
